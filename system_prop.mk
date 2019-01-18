@@ -27,8 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
-    ro.sf.override_null_lcd_density=1 \
-    ro.sf.lcd_density=320
+    ro.sf.override_null_lcd_density=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
