@@ -104,6 +104,7 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/vendor/firmware/bcm43341/fw_bcmdhd.
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_MODULE_ARG           := "iface_name=wlan0"
 WIFI_DRIVER_MODULE_NAME          := "bcmdhd"
+WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # Zygote Whitelist
