@@ -108,6 +108,7 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 WIFI_DRIVER_MODULE_ARG           := "iface_name=wlan0"
 WIFI_DRIVER_MODULE_NAME          := "bcmdhd"
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # Zygote Whitelist
