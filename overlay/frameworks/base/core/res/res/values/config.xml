@@ -233,8 +233,8 @@
         <item>lte:524288,1048576,2097152,262144,524288,1048576</item>
     </string-array>
 
-    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
-    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
+    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
+    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
     <!-- Boolean indicating associated network selection is allowed -->
     <bool translatable="false" name="config_wifi_framework_enable_associated_network_selection">false</bool>
