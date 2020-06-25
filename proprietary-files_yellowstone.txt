@@ -1,3 +1,5 @@
+## All blobs are from ardbeg-user-4.4.2-KOT49H-140829D-release-keys unless pinned.
+
 # Bluetooth
 vendor/firmware/bcm43341.hcd
 

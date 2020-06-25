@@ -1,3 +1,5 @@
+## All blobs are from wx_na_wf-user-7.0-NRD90M-1928188_904.2811-release-keys unless otherwise pinned.
+
 # Audio
 vendor/lib/hw/audio.primary.tegra.so|626e35306b001bbb2a67a44abe63a2d1a30a6f2c
 vendor/lib/libim501.so|65c228a4344d62e5184f03ad015d52af7ecab5d3
