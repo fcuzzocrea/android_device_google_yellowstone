@@ -60,6 +60,7 @@ TARGET_SCREEN_DENSITY := 320
 TARGET_KERNEL_SOURCE := kernel/google/yellowstone
 TARGET_KERNEL_CONFIG := yellowstone_defconfig
 BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_RAMDISK_USE_XZ := true
 
 # Lineage Hardware
 BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/lineagehw
