@@ -19,15 +19,15 @@ vendor/bin/glgps_nvidiaTegra2android|15c853be84202969f2fb172ba5c8cf230c659615
 vendor/bin/gps_select.sh|b5563e2b35ee2a89d20bd1ef325d877721ba82dd
 
 # Graphics
-vendor/lib/egl/libEGL_tegra.so|0c0650479f98562e79c5f6bbd5e296e6cd0675f5
+vendor/lib/egl/libEGL_tegra.so
 vendor/lib/egl/libGLESv1_CM_tegra.so
 vendor/lib/egl/libGLESv2_tegra.so
 vendor/lib/hw/gralloc.tegra.so
 vendor/lib/hw/hwcomposer.tegra.so|9dfc6887dafea42c8d6ea0d5b44046bd9008d227
 vendor/lib/hw/memtrack.tegra.so
 vendor/lib/hw/vulkan.tegra.so|e80ff3d6d428a440127bef1e51c9c9e55dfe6c5e
-vendor/lib/libcuda.so|d3a81ed218322186ba5955508f86b48b2cc3a3df
-vendor/lib/libglcore.so|0fba593ef515d0ab8cc24ab0fd5027de1dab5119
+vendor/lib/libcuda.so
+vendor/lib/libglcore.so
 vendor/lib/libnvavp.so
 vendor/lib/libnvblit.so
 vendor/lib/libnvcpl.so
@@ -46,7 +46,6 @@ vendor/lib/libnvtnr.so
 vendor/lib/libnvtvmr.so
 vendor/lib/libnvvicsi_v3.so
 vendor/lib/libnvwsi.so
-vendor/lib/libw.so|7e0e63f96c0509f7498ec81ae92fcc6e196723eb
 
 # Graphics firmware
 etc/firmware/tegra12x/nvhost_tsec.fw
@@ -76,7 +75,7 @@ etc/hdcpsrm/hdcp2xtest.srm
 # Media
 vendor/lib/libnvmm.so
 vendor/lib/libnvmm_audio.so
-vendor/lib/libnvmm_camera_v3.so|121a75953898fdde089966f1780a45d467736576
+vendor/lib/libnvmm_camera_v3.so
 vendor/lib/libnvmm_contentpipe.so
 vendor/lib/libnvmm_msaudio.so
 vendor/lib/libnvmm_parser.so

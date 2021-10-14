@@ -213,7 +213,8 @@ PRODUCT_PACKAGES += \
     libcutils_shim \
     libnvmm_shim \
     libnvos_shim \
-    libshim_zw
+    libshim_zw \
+    libw
 
 # System Properties
 -include $(LOCAL_PATH)/system_prop.mk

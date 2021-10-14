@@ -16,6 +16,15 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE           := libw
+LOCAL_SRC_FILES_32     := intrinsics_shim.s
+LOCAL_SRC_FILES_64     := intrinsics_shim.cpp
+LOCAL_SHARED_LIBRARIES := libcutils
+LOCAL_VENDOR_MODULE    := true
+LOCAL_LDFLAGS_arm      += -Wl,--version-script,$(LOCAL_PATH)/intrinsics_shim.arm.map
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := socket_loopback_client.c
 LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_MULTILIB := 32
