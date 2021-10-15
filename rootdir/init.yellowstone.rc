@@ -36,7 +36,7 @@ on boot
     setprop sys.usb.mtp.device_type 2
 
 on init
-    export LD_PRELOAD "libshim_zw.so"
+    export LD_PRELOAD "/system/lib/libshim_zw.so"
 
     setprop phs.gpucompute.gpu_freq 30
     # Mount a tmpfs into /mnt/tmp for hosting nvram, phs shared memory
