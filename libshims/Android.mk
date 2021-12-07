@@ -1,6 +1,14 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libnvmm_shim
+LOCAL_SRC_FILES := nvmm_connect.cpp
+LOCAL_MULTILIB := 32
+LOCAL_SHARED_LIBRARIES := libstagefright
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := socket_loopback_client.c
 LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_MULTILIB := 32

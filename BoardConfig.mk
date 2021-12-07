@@ -97,7 +97,11 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.yellowstone
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # Shims
-TARGET_LD_SHIM_LIBS := /system/lib/libcutils.so|/system/lib/libcutils_shim.so:/system/vendor/bin/glgps_nvidiaTegra2android|libsensor.so
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libcutils.so \
+    /system/lib/libcutils_shim.so \
+    /system/vendor/bin/glgps_nvidiaTegra2android|libsensor.so \
+    /system/vendor/lib/libnvomxadaptor.so|/system/vendor/lib/libnvmm_shim.so
 
 # Wi-Fi
 BOARD_HOSTAPD_DRIVER             := NL80211
