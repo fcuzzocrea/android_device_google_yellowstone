@@ -15,10 +15,16 @@
  */
 
 #include <binder/IServiceManager.h>
+#include <ui/GraphicBuffer.h>
 
 extern "C" android::status_t _ZN7android9OMXClient7connectEv();
+extern "C" void _ZN7android13GraphicBufferC1Ev();
 
 extern "C" android::status_t _ZN7android9OMXClient7connectEPb(bool *unused) {
     return _ZN7android9OMXClient7connectEv();
 }
 
+extern "C" void _ZN7android13GraphicBufferC1EP19ANativeWindowBufferb(ANativeWindowBuffer* buffer, bool keepOwnership)
+{
+    _ZN7android13GraphicBufferC1Ev();
+}
