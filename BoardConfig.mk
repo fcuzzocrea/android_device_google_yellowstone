@@ -98,6 +98,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/bin/app_process32|/system/lib/libshim_zw.so \
     /system/lib/libcutils.so \
     /system/lib/libcutils_shim.so \
     /system/vendor/bin/glgps_nvidiaTegra2android|libsensor.so \
