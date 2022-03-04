@@ -59,6 +59,10 @@ function blob_fixup() {
         lib/libtango_navigation_service.so | lib/libtango_service_library.so | libtango_ux_internal_support_library.so)
         "${PATCHELF}" --add-needed "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        # Patch blobs to resolve movedlog symbol
+        vendor/lib/libnvcamlog.so | vendor/lib/libnvmm_camera_v3.so | vendor/lib/libnvcamerahdr_v3.so | vendor/lib/egl/libEGL_tegra.so | vendor/lib/libglcore.so | vendor/lib/libnvgr.so | vendor/lib/libnvmm_utils.so | vendor/lib/libnvomxadaptor.so | vendor/lib/libnvomx.so | vendor/lib/libmplmpu.so)
+        "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
+            ;;
         # Patch libglcore blob to resolve moved symbol
         vendor/lib/libglcore.so)
         "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
