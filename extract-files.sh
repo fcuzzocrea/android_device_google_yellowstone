@@ -59,6 +59,10 @@ function blob_fixup() {
         lib/libtango_navigation_service.so | lib/libtango_service_library.so | libtango_ux_internal_support_library.so)
         "${PATCHELF}" --add-needed "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
+        # Patch libglcore blob to resolve moved symbol
+        vendor/lib/libglcore.so)
+        "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
+            ;;
         # Patch DRM blob to resolve moved symbol
         vendor/lib/mediadrm/libwvdrmengine.so)
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
