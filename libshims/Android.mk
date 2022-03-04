@@ -9,6 +9,13 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libnvos_shim
+LOCAL_SRC_FILES := nvos_shim.cpp
+LOCAL_SHARED_LIBRARIES := libnvos
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_SRC_FILES := socket_loopback_client.c
 LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_MULTILIB := 32

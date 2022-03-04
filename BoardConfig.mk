@@ -101,7 +101,10 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libcutils.so \
     /system/lib/libcutils_shim.so \
     /system/vendor/bin/glgps_nvidiaTegra2android|libsensor.so \
-    /system/vendor/lib/libnvomxadaptor.so|/system/vendor/lib/libnvmm_shim.so
+    /system/vendor/lib/egl/libEGL_tegra.so|/system/vendor/lib/libnvos_shim.so \
+    /system/vendor/lib/libnvomxadaptor.so|/system/vendor/lib/libnvmm_shim.so \
+    /system/vendor/lib/libnvmlite_video.so|/system/vendor/lib/libnvos_shim.so
+
 
 # Wi-Fi
 BOARD_HOSTAPD_DRIVER             := NL80211
