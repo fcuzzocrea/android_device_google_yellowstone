@@ -63,6 +63,10 @@ function blob_fixup() {
         vendor/lib/libglcore.so)
         "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
             ;;
+        # Patch nvomxadaptor blob to resolve moved symbol
+        vendor/lib/libnvomxadaptor.so)
+        "${PATCHELF}" --add-needed "libmedia_omx.so" "${2}"
+            ;;
         # Patch DRM blob to resolve moved symbol
         vendor/lib/mediadrm/libwvdrmengine.so)
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
