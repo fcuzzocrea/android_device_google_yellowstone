@@ -13,7 +13,7 @@
 # limitations under the License.
 
 INSTALLED_DTBIMAGE_TARGET := $(PRODUCT_OUT)/dtb.img
-$(INSTALLED_DTBIMAGE_TARGET): TARGET_KERNEL_BINARIES | $(ACP)
+$(INSTALLED_DTBIMAGE_TARGET): $(INSTALLED_KERNEL_TARGET)  | $(ACP)
 	echo -e ${CL_GRN}"Building DTBs"${CL_RST}
 	cat $(shell find $(PRODUCT_OUT)/obj/KERNEL_OBJ/arch/arm/boot/dts/** -type f -name "tegra124-yellowstone.dtb" | sort) > $@
 	$(call add-radio-file,$(INSTALLED_DTBIMAGE_TARGET))
