@@ -57,6 +57,7 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
 TARGET_SCREEN_DENSITY := 320
 
 # Kernel
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/google/yellowstone
 TARGET_KERNEL_CONFIG := yellowstone_defconfig
 BOARD_KERNEL_IMAGE_NAME := zImage
@@ -96,17 +97,31 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.yellowstone
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/bin/app_process32|/system/lib/libshim_zw.so \
-    /system/lib/libcutils.so \
-    /system/lib/libcutils_shim.so \
+    /system/lib/libcutils.so|/system/lib/libcutils_shim.so \
     /system/vendor/bin/glgps_nvidiaTegra2android|libsensor.so \
     /system/vendor/lib/egl/libEGL_tegra.so|/system/vendor/lib/libnvos_shim.so \
     /system/vendor/lib/libnvomxadaptor.so|/system/vendor/lib/libnvmm_shim.so \
     /system/vendor/lib/libnvmlite_video.so|/system/vendor/lib/libnvos_shim.so
 
-
+TARGET_LD_SHIM_LIBS += \
+  /system/lib/libmplmpu.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvcamlog.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvmm_camera_v3.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvcamerahdr_v3.so|/system/lib/liblog.so \
+  /system/vendor/lib/egl/libEGL_tegra.so|/system/lib/liblog.so \
+  /system/vendor/lib/libglcore.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvgr.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvmm_utils.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvomxadaptor.so|/system/lib/liblog.so \
+  /system/vendor/lib/libnvomx.so|/system/lib/liblog.so
+  
+  
 # Wi-Fi
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd

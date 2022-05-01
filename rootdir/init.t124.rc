@@ -231,11 +231,11 @@ on property:pes_mount_ok=1
 
 # Mount usb drives as /usbdrive. Generally usb drives are formatted with FAT
 # filesystem, so we support FAT as of now.
-on device-added-/sys/block/sda
-  mount vfat /dev/block/sda /mnt/media_rw/usbdrive
+# on device-added-/sys/block/sda
+#  mount vfat /dev/block/sda /mnt/media_rw/usbdrive
 
-on device-removed-/sys/block/sda
-  umount /mnt/media_rw/usbdrive
+#on device-removed-/sys/block/sda
+#  umount /mnt/media_rw/usbdrive
 
 # Touchscreen (Raydium)
 service rm_ts_service /system/bin/rm_ts_server
